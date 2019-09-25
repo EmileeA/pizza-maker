@@ -10,16 +10,28 @@ const cheeses = [
 
 const getSelectedCheeses = () => {
 //get all cheese checkboxes
-//keep the checked ones in a new array
+const cheeseCheckboxes = document.getElementsByClassName('cheese');
+const selectedCheeses = [];
+console.log(cheeseCheckboxes);
+//keep the checked ones in a new array (we are using "j" because we have another for loop using "i")
+for(let j = 0; j < cheeseCheckboxes.length; j++) {
+    console.log(cheeseCheckboxes[j].checked);
+    for(let k = 0; k < cheeses.length; k++) {
+        if(cheeseCheckboxes[j].checked && cheeseCheckboxes[j].id === cheeses [k].id){
+            selectedCheeses.push(cheeses[k]);
+        }
+    }
+}
+
 //return the new array
-return "I like cats";
+return selectedCheeses;
 };
 
 const printCheeseOptions = () => {
     let domString = '';
     for(let i =0; i < cheeses.length; i++)
     {domString +=  `<div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id=${cheeses[i].id}>
+    <input type="checkbox" class="form-check-input cheese" id=${cheeses[i].id}>
     <label class="form-check-label" for=${cheeses[i].id}>${cheeses[i].name}</label>
   </div>`;
 }
