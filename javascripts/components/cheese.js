@@ -8,6 +8,12 @@ const cheeses = [
     {id:"cheese4", name: "green", price: 0 },
 ];
 
+const getSelectedCheeses = () => {
+//get all cheese checkboxes
+//keep the checked ones in a new array
+//return the new array
+return "I like cats";
+};
 
 const printCheeseOptions = () => {
     let domString = '';
@@ -20,4 +26,4 @@ const printCheeseOptions = () => {
     utilities.printToDom('cheese-counter', domString)
 };
 
-export default { printCheeseOptions };
+export default { printCheeseOptions, getSelectedCheeses };
