@@ -4,7 +4,7 @@
 Use this application to select pizza toppings and get a final cost for your pizza creation.
 
 ## Screenshots
-![Pizza Maker Preview]()
+![Pizza Maker Preview](https://github.com/EmileeA/pizza-maker/raw/master/screenshots/mainview.png)
 
 
 ## How to run
