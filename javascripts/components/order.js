@@ -8,6 +8,7 @@ const createFinalOrder = (items) => {
         domString2 += `<h2>${items[i].name}</h2>`;
     }
     utilities.printToDom('final-order', domString2);
+    //this will overwrite the button but we could make another div
 };
 
 const createOrderEvent = () => {
@@ -15,12 +16,16 @@ const createOrderEvent = () => {
     //const selectedMeats = meat.getSelectedMeats(); (this will be for the homework)
     createFinalOrder(selectedCheeses);
         console.log('you clicked a button',selectedCheeses);
-}
+        //12- created a final function
+};
+//10 selected cheeses will be in cheese.js
 
 const printOrderButton = () => {
     const domString = '<button id="order-button" class="btn btn-secondary">Make Pizza</button>'
     utilities.printToDom('final-order', domString);
     document.getElementById('order-button').addEventListener('click', createOrderEvent)
+//9-added event, put an id on the button, created a function
 };
 
+//8- made function and added import
 export default { printOrderButton };
